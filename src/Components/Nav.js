@@ -6,7 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 export default function Nav() {
   const [totalCart, setTotalCart] = useState(0);
-  const { name, cart } = useContext(dataContext);
+  const { name, cart, setShowCart } = useContext(dataContext);
 
   useEffect(() => {
     let total = 0;
@@ -20,7 +20,11 @@ export default function Nav() {
     <div className="nav">
       <div className="nav-div">
         <span className="name">{name}</span>
-        <div count={totalCart} className="cart cart-content">
+        <div
+          count={totalCart}
+          className="cart cart-content"
+          onClick={() => setShowCart(true)}
+        >
           <span style={{ cursor: "pointer" }}>Cart</span>
           <FaShoppingCart style={{ cursor: "pointer" }} />
         </div>

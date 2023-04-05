@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import "../Styles/App.css";
 import Dish from "./Dish";
 import Nav from "./Nav";
+import Cart from "./Cart";
 
 export const dataContext = createContext();
 
@@ -11,6 +12,7 @@ function App() {
   const [getDishes, setDishes] = useState(null);
   const [active, setActive] = useState("");
   const [name, setName] = useState("");
+  const [showCart, setShowCart] = useState(false);
 
   const value = {
     name,
@@ -21,6 +23,7 @@ function App() {
     setDishes,
     active,
     setActive,
+    setShowCart,
   };
 
   useEffect(() => {
@@ -46,6 +49,7 @@ function App() {
         <Nav />
         <Dish />
       </div>
+      {showCart ? <Cart /> : null}
     </dataContext.Provider>
   );
 }

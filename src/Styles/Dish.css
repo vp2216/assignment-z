@@ -96,6 +96,10 @@
     padding: 1rem 0;
   }
 
+  .dish-items{
+    align-items: flex-start;
+  }
+
   .dish-name {
     font-size: 1.25rem;
   }
