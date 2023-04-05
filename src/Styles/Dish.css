@@ -1,0 +1,79 @@
+
+.dish {
+  width: 90%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 3rem 0;
+  margin: auto;
+}
+
+.dish-items {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  border-radius: 0.25rem;
+  padding: 1rem 0;
+}
+
+.dish-items:nth-child(even){
+  background: rgb(241, 241, 241);
+}
+
+.dish-items:nth-child(odd){
+  background: rgb(236, 236, 236);
+}
+
+.dish-price{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-detais {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.dish-image {
+  height: 100px;
+  width: 100px;
+  padding: 0 1rem;
+}
+
+.dish-order{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.25rem;
+  gap: 2rem;
+  background: green;
+  color: white;
+  width: fit-content;
+  border-radius: 1.5rem;
+}
+
+.dish-btn{
+  font-weight: 600;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.load-image{
+width: 2rem;
+}

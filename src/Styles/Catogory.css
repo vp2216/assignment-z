@@ -1,0 +1,36 @@
+.catogory {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.catogory-items-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.catogory-items {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 4rem;
+  white-space: nowrap;
+}
+
+.active:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px navy;
+  padding-bottom: 1rem;
+  transform: scaleX(0);
+  animation: activeAnimation 300ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes activeAnimation {
+  100% {
+    transform: scaleX(1);
+  }
+}
