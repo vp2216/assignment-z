@@ -24,6 +24,10 @@ function App() {
   };
 
   useEffect(() => {
+    if (localStorage.getItem("cart")) setCart(JSON.parse(localStorage.cart));
+  }, []);
+
+  useEffect(() => {
     fetch("https://run.mocky.io/v3/a67edc87-49c7-4822-9cb4-e2ef94cb3099")
       .then((res) => res.json())
       .then((data) => {
@@ -31,6 +35,10 @@ function App() {
         setMenuData(data[0].table_menu_list);
       });
   }, []);
+
+  useEffect(() => {
+    if (cart.length !== 0) localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <dataContext.Provider value={value}>

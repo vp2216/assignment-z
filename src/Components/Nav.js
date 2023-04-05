@@ -10,19 +10,19 @@ export default function Nav() {
 
   useEffect(() => {
     let total = 0;
-    cart.forEach(i => {
+    cart.forEach((i) => {
       total += i.count;
     });
     setTotalCart(total);
   }, [cart]);
-  
+
   return (
     <div className="nav">
       <div className="nav-div">
         <span className="name">{name}</span>
-        <div test={totalCart} className="cart cart-content">
-          <span>Cart</span>
-          <FaShoppingCart />
+        <div count={totalCart} className="cart cart-content">
+          <span style={{ cursor: "pointer" }}>Cart</span>
+          <FaShoppingCart style={{ cursor: "pointer" }} />
         </div>
       </div>
       <Catogory />

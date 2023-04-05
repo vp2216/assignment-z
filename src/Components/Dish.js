@@ -35,9 +35,7 @@ export default function Dish() {
             return (
               <div className="dish-items" key={i}>
                 <div className="dish-detais">
-                  <span style={{ fontWeight: "700", fontSize: "1.5rem" }}>
-                    {data.dish_name}
-                  </span>
+                  <span className="dish-name">{data.dish_name}</span>
                   <div className="dish-price">
                     <span style={{ fontWeight: "600" }}>
                       {data.dish_price + " " + data.dish_currency}
@@ -77,7 +75,7 @@ export default function Dish() {
                       >
                         -
                       </button>
-                      <span style={{ fontWeight: "600" }}>
+                      <span style={{ fontWeight: "600",width:"40%",textAlign:"center" }}>
                         {cart.find((i) => {
                           return i.id === data.dish_id;
                         })?.count || 0}

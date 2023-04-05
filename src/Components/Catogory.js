@@ -1,10 +1,9 @@
 import { useContext, useEffect } from "react";
 import { dataContext } from "./App";
-import "../Styles/Catogory.css"
+import "../Styles/Catogory.css";
 
 export default function Catogory() {
-  const { menuData, active, setActive } =
-    useContext(dataContext);
+  const { menuData, active, setActive } = useContext(dataContext);
   useEffect(() => {
     if (menuData) setActive(menuData[0].menu_category);
   }, [menuData]);

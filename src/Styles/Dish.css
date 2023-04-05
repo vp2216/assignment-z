@@ -1,10 +1,9 @@
-
 .dish {
   width: 90%;
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  padding: 3rem 0;
+  padding: 2rem 0;
   margin: auto;
 }
 
@@ -18,15 +17,20 @@
   padding: 1rem 0;
 }
 
-.dish-items:nth-child(even){
+.dish-items:nth-child(even) {
   background: rgb(241, 241, 241);
 }
 
-.dish-items:nth-child(odd){
+.dish-items:nth-child(odd) {
   background: rgb(236, 236, 236);
 }
 
-.dish-price{
+.dish-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.dish-price {
   display: flex;
   justify-content: space-between;
 }
@@ -45,35 +49,62 @@
   padding: 0 1rem;
 }
 
-.dish-order{
+.dish-order {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.25rem;
-  gap: 2rem;
   background: green;
   color: white;
   width: fit-content;
   border-radius: 1.5rem;
+  overflow: hidden;
+  width: 8rem;
 }
 
-.dish-btn{
+.dish-btn {
   font-weight: 600;
   border: none;
   font-size: 2rem;
   cursor: pointer;
   background: transparent;
   color: white;
+  width: 30%;
 }
 
-.loading{
+.dish-btn:hover {
+  background: rgb(0, 150, 0);
+}
+
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   font-weight: 600;
+  gap: 0.5rem;
+  margin-top: 3rem;
 }
 
-.load-image{
-width: 2rem;
+.load-image {
+  width: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .dish {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .dish-name {
+    font-size: 1.25rem;
+  }
+
+  .dish-detais {
+    padding: 0 0.25rem 0 1rem;
+  }
+
+  .dish-image {
+    padding: 0 1rem 0 0.25rem;
+  }
 }

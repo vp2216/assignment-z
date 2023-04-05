@@ -15,14 +15,22 @@
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem 0 3rem;
   white-space: nowrap;
+}
+
+.catogory-items:hover {
+  color: purple;
+}
+
+.active {
+  color: purple;
 }
 
 .active:after {
   display: block;
   content: "";
-  border-bottom: solid 3px navy;
+  border-bottom: solid 3px purple;
   padding-bottom: 1rem;
   transform: scaleX(0);
   animation: activeAnimation 300ms ease-in-out;
@@ -32,5 +40,11 @@
 @keyframes activeAnimation {
   100% {
     transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .catogory-items {
+    padding: 1rem 2rem;
   }
 }
